@@ -68,7 +68,7 @@ class Bot:
             SUBMIT_BUTTON.click()
             
             # You have to solve the captcha for it to continue
-            while len(driver.find_elements_by_class_name("description")) == 0:
+            while len(driver.find_elements(By.CLASS_NAME ,'description')) == 0:
                 time.sleep(1)
             
             LOGIN_SUCCESS = True
